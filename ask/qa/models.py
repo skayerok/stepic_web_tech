@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Question(models.Model):
+    objects = QuestionManager()
     title = models.CharField(max_length=50)
     text = models.TextField(max_length=500)
     added_at = models.DateField()
@@ -11,8 +12,17 @@ class Question(models.Model):
     likes = models.ManyToManyField(User, related_name='likes_set')
 
 
+class QuestionManager(models.Model):
+    def new():
+        pass
+    def popular():
+        pass
+
+
 class Answer(models.Model):
     text = models.CharField(max_length=500)
     added_at = models.DateField()
     question = models.ForeignKey(Question)
     author = models.ForeignKey(User)
+
+
