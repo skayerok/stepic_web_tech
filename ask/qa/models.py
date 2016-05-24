@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Question(models.Model):
     title = models.CharField(max_length=50)
-    text = models.CharField(max_length=500)
+    text = models.TextField(max_length=500)
     added_at = models.DateField()
     rating = models.IntegerField(default=0)
     author = models.ForeignKey(User)

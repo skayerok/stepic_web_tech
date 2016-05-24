@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'qa', # mb i should add this app in some other way: qa.apps.QaConfig
+    'qa.apps.QaConfig', # mb i should add this app in some other way: qa.apps.QaConfig
 )
 
 MIDDLEWARE_CLASSES = (
