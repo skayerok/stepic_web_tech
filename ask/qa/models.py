@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class QuestionManager(models.Model):
+class QuestionManager(models.Manager):
     def new():
         pass
     def popular():
@@ -20,7 +20,7 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
-    text = models.CharField(max_length=500)
+    text = models.TextField(max_length=500)
     added_at = models.DateField()
     question = models.ForeignKey(Question)
     author = models.ForeignKey(User)
