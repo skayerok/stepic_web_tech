@@ -16,4 +16,3 @@ class Answer(models.Model):
     added_at = models.DateField()
     question = models.ForeignKey(Question)
     author = models.ForeignKey(User)
-
