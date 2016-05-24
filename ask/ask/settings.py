@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'qa.apps.QaConfig', # mb i should add this app in some other way: qa.apps.QaConfig
+    'qa', # mb i should add this app in some other way: qa.apps.QaConfig
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,8 +62,8 @@ DATABASES = {
         'NAME': 'db',
         'USER': 'root',
         # 'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306',
     }
 }
 
