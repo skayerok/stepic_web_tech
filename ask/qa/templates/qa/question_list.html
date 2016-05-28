@@ -1,0 +1,6 @@
+<ul>
+    {% for question in questions %}
+        <li><a href="{% url 'question_details' question.id %}">{{ question }}</a></li>
+    {% endfor %}
+</ul>
+{{ request }}
