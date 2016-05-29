@@ -1,7 +1,8 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage
 from django.shortcuts import render, get_object_or_404, Http404
-from .models import Question
+from .models import Question, Answer
+from .forms import AskForm, AnswerForm
 
 
 def test(request, *args, **kwargs):
@@ -10,10 +11,33 @@ def test(request, *args, **kwargs):
 
 def question_details(request, question_id):
     question = get_object_or_404(Question, id=question_id)
-    return render(request, 'qa/question_details.html', {
-        'question': question,
-        'answers': question.answer_set.all()
-    })
+    form = AnswerForm(initial={'question': question_id})
+    if request.method == 'GET':
+        return render(request, 'qa/question_details.html', {
+            'question': question,
+            'answers': question.answer_set.all(),
+            'form': form,
+        })
+    elif request.method == 'POST':
+        return add_answer(request)
+
+
+def add_answer(request):
+    if request.method == 'GET':
+        return HttpResponseRedirect('/')
+    elif request.method == 'POST':
+        form = AnswerForm(request.POST)
+        if form.is_valid():
+            question_id = form.cleaned_data['question']
+            question = Question.objects.get(id=question_id)
+            answer = Answer(
+                text=form.cleaned_data['text'],
+                question=question,
+            )
+            question.answer_set.add(answer)
+            question.save()
+            url = '/question/' + str(question_id)
+            return HttpResponseRedirect(url)
 
 
 def question_list(request):
@@ -40,3 +64,19 @@ def question_list(request):
         'paginator': paginator,
         'page': page,
     })
+
+
+def question_add(request):
+    if request.method == 'GET':
+        return render(request, 'qa/question_add.html', {
+            'form': AskForm,
+        })
+    elif request.method == 'POST':
+        form = AskForm(request.POST)
+        if form.is_valid():
+            question = form.save()
+            question.save()
+            url = '/question/' + str(question.id)
+            return HttpResponseRedirect(url)
+
+

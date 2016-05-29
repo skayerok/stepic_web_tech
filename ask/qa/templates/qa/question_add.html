@@ -1,12 +1,4 @@
-<p>{{ question.title }}</p>
-<p>{{ question.text }}</p>
-<ul>
-{% for answer in answers %}
-    <li>{{ answer }}</li>
-{% endfor %}
-</ul>
-
-<form action="/answer/" method="post">
+<form action="new/" method="post">
     {% csrf_token %}
     <fieldset>
         {% for field in form %}
