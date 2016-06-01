@@ -87,17 +87,14 @@ def login_user(request):
             'form': LoginForm,
         })
     elif request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            user = authenticate(
-                username=form.cleaned_data['username'],
-                password=form.cleaned_data['password'],
-            )
-            if user is not None:
-                login(request, user)
-                return HttpResponseRedirect('/')
-            else:
-                return render(request, 'qa/login.html', {'form': form})
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            return render(request, 'qa/login.html', {'form': form})
 
 
 def signup(request):
