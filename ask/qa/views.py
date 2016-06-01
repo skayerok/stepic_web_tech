@@ -3,6 +3,7 @@ from django.core.paginator import Paginator, EmptyPage
 from django.shortcuts import render, get_object_or_404, Http404
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.db import IntegrityError
 from .models import Question, Answer
 from .forms import AskForm, AnswerForm, LoginForm, SignupForm
 
@@ -87,14 +88,18 @@ def login_user(request):
             'form': LoginForm,
         })
     elif request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
+        try:
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(username=username, password=password)
+        except (ValueError, NameError):
+            return HttpResponseRedirect('/')
         if user is not None:
             login(request, user)
             return HttpResponseRedirect('/')
         else:
-            return render(request, 'qa/login.html', {'form': form})
+            # return render(request, 'qa/login.html', {'form': form})
+            return HttpResponseRedirect('/')
 
 
 def signup(request):
@@ -103,11 +108,14 @@ def signup(request):
             'form': SignupForm,
         })
     elif request.method == 'POST':
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        user = User.objects.create_user(username=username, email=email, password=password)
-        user.save()
+        try:
+            username = request.POST['username']
+            email = request.POST['email']
+            password = request.POST['password']
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.save()
+        except (IntegrityError, ValueError):
+            return HttpResponseRedirect('/')
         return login_user(request)
 
 

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6661d23-4af3-4f69-89d2-9da5d38d74e8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/db" afterPath="$PROJECT_DIR$/ask/db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/1.8.iml" afterPath="$PROJECT_DIR$/.idea/1.8.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/qa/views.py" afterPath="$PROJECT_DIR$/ask/qa/views.py" />
     </list>
@@ -49,8 +52,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ask/qa/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+            <state relative-caret-position="257">
+              <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -63,7 +66,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
               <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-              <folding />
+              <folding>
+                <marker date="1464783816144" expanded="true" signature="401:708" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -410,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464784948314</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes in signup view">
+      <created>1464785222087</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1464785222087</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -449,7 +461,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changes in login view" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in login view" />
+    <MESSAGE value="changes in signup view" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in signup view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -601,14 +614,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
+          <folding>
+            <marker date="1464783816144" expanded="true" signature="401:708" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ask/qa/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+        <state relative-caret-position="257">
+          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
