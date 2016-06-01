@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6661d23-4af3-4f69-89d2-9da5d38d74e8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/db" afterPath="$PROJECT_DIR$/ask/db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/1.8.iml" afterPath="$PROJECT_DIR$/.idea/1.8.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/qa/templates/qa/login.html" afterPath="$PROJECT_DIR$/ask/qa/templates/qa/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/qa/views.py" afterPath="$PROJECT_DIR$/ask/qa/views.py" />
     </list>
     <ignored path="1.8.iws" />
@@ -53,8 +49,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ask/qa/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+            <state relative-caret-position="234">
+              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -407,6 +403,14 @@
       <option name="presentableId" value="Default" />
       <updated>1464291602311</updated>
     </task>
+    <task id="LOCAL-00001" summary="changes in login view">
+      <created>1464784948314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464784948314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -442,6 +446,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes in login view" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in login view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -599,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ask/qa/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+        <state relative-caret-position="234">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>

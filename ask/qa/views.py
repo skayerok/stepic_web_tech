@@ -103,13 +103,11 @@ def signup(request):
             'form': SignupForm,
         })
     elif request.method == 'POST':
-        form = SignupForm(request.POST)
-        if form.is_valid():
-            user = User.objects.create_user(
-                form.cleaned_data['username'],
-                form.cleaned_data['email'],
-                form.cleaned_data['password'])
-            user.save()
-            return login_user(request)
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        user = User.objects.create_user(username=username, email=email, password=password)
+        user.save()
+        return login_user(request)
 
 
