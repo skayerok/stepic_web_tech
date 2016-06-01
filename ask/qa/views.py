@@ -1,13 +1,14 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage
 from django.shortcuts import render, get_object_or_404, Http404
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from .models import Question, Answer
-from .forms import AskForm, AnswerForm
+from .forms import AskForm, AnswerForm, LoginForm, SignupForm
 
 
 def test(request, *args, **kwargs):
     return HttpResponse('OK')
-
 
 def question_details(request, question_id):
     question = get_object_or_404(Question, id=question_id)
@@ -78,5 +79,40 @@ def question_add(request):
             question.save()
             url = '/question/' + str(question.id)
             return HttpResponseRedirect(url)
+
+
+def login_user(request):
+    if request.method == 'GET':
+        return render(request, 'qa/login.html', {
+            'form': LoginForm,
+        })
+    elif request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            user = authenticate(
+                username=form.cleaned_data['username'],
+                password=form.cleaned_data['password'],
+            )
+            if user is not None:
+                login(request, user)
+                return HttpResponseRedirect('/')
+            else:
+                return render(request, 'qa/login.html', {'form': form})
+
+
+def signup(request):
+    if request.method == 'GET':
+        return render(request, 'qa/signup.html', {
+            'form': SignupForm,
+        })
+    elif request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(
+                form.cleaned_data['username'],
+                form.cleaned_data['email'],
+                form.cleaned_data['password'])
+            user.save()
+            return login_user(request)
 
 
