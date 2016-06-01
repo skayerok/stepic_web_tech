@@ -1,8 +1,9 @@
-<p>{{ question.title }}</p>
-<p>{{ question.text }}</p>
+<p>Title: {{ question.title }}</p>
+<p>Text: {{ question.text }}</p>
+<p>author: {{ question.author }}</p>
 <ul>
 {% for answer in answers %}
-    <li>{{ answer }}</li>
+    <li>{{ answer.author }}: {{ answer }}</li>
 {% endfor %}
 </ul>
 

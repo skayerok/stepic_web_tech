@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e6661d23-4af3-4f69-89d2-9da5d38d74e8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/db" afterPath="$PROJECT_DIR$/ask/db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/1.8.iml" afterPath="$PROJECT_DIR$/.idea/1.8.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/qa/templates/qa/question_details.html" afterPath="$PROJECT_DIR$/ask/qa/templates/qa/question_details.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ask/qa/views.py" afterPath="$PROJECT_DIR$/ask/qa/views.py" />
     </list>
     <ignored path="1.8.iws" />
@@ -52,11 +51,31 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ask/qa/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+            <state relative-caret-position="347">
+              <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question_details.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,13 +129,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ask/qa/templates/qa/question_details.html" />
         <option value="$PROJECT_DIR$/ask/ask/urls.py" />
         <option value="$PROJECT_DIR$/ask/qa/templates/qa/question_list.html" />
         <option value="$PROJECT_DIR$/ask/qa/templates/qa/question_paginator.html" />
         <option value="$PROJECT_DIR$/ask/ask/settings.py" />
         <option value="$PROJECT_DIR$/ask/qa/models.py" />
         <option value="$PROJECT_DIR$/ask/qa/templates/qa/login.html" />
+        <option value="$PROJECT_DIR$/ask/qa/templates/qa/question_details.html" />
         <option value="$PROJECT_DIR$/ask/qa/views.py" />
       </list>
     </option>
@@ -422,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464785222087</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changes in view, adapting it to task (shitty code)">
+      <created>1464788592256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1464788592256</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,7 +488,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changes in login view" />
     <MESSAGE value="changes in signup view" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in signup view" />
+    <MESSAGE value="changes in view, adapting it to task (shitty code)" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in view, adapting it to task (shitty code)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -571,8 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_list.html" />
-    <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_details.html" />
     <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_paginator.html" />
     <entry file="file://$PROJECT_DIR$/ask/ask/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -600,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ask/qa/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -620,10 +635,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ask/qa/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ask/qa/templates/qa/question_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ask/qa/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+        <state relative-caret-position="347">
+          <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>

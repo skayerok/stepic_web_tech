@@ -29,12 +29,14 @@ def add_answer(request):
         return HttpResponseRedirect('/')
     elif request.method == 'POST':
         form = AnswerForm(request.POST)
+        form._user = request.user
         if form.is_valid():
             question_id = form.cleaned_data['question']
             question = Question.objects.get(id=question_id)
             answer = Answer(
                 text=form.cleaned_data['text'],
                 question=question,
+                author=form._user
             )
             question.answer_set.add(answer)
             question.save()
@@ -75,8 +77,10 @@ def question_add(request):
         })
     elif request.method == 'POST':
         form = AskForm(request.POST)
+        form._user = request.user
         if form.is_valid():
             question = form.save()
+            question.author = form._user
             question.save()
             url = '/question/' + str(question.id)
             return HttpResponseRedirect(url)
